@@ -26,10 +26,26 @@ In this project you will create a login page and request a token from the server
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain what a token is used for.
-- [ ] What steps can you take in your web apps to keep your data secure?
-- [ ] Describe how web servers work.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+- [X] Explain what a token is used for.
+
+  When a user tries to login (with the correct credentials), the server generates a token that verifies the user's identity, which is sent back to the client (browser/React app). Then, every request after that sends the same token back to the server, so it knows that it's the same user. 
+
+- [X] What steps can you take in your web apps to keep your data secure?
+
+  Use protected routes that will only render with an authenticated login, and send an authentication header with our API calls.
+
+- [X] Describe how web servers work.
+
+  A web server parses a URL into 3 parts:
+  1. HTTP (protocol)
+  2. The server name (www.lambdaschool.com)
+  3. The file name (/about)
+
+  Using a DNS, it translates the server name to an IP address, and uses that to connect to its actual server machine. Then, the app/browser forms a connection to the server at that IP address on port 80. The app/browser sends a GET request to the server, asking for the file, so the server sends the HTML text for the webpage to the browser, which translates the tags to display the formatted page on your screen.
+
+- [X] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+  Get, Post, Put, Delete
 
 
 ## Project Set Up
